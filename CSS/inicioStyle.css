@@ -1,0 +1,115 @@
+/* Tarjeta de bienvenida */
+.welcome-card{
+   display:flex;
+   justify-content:space-between;
+   align-items:center;
+   gap:20px;
+   padding:24px;
+   background-color:white;border:1px
+   solid #e8e6c8;
+   border-radius:12px;box-shadow:0 6px 18px rgba(155,34,23,.881);
+}
+
+.welcome-text h2{
+   color:#a11a12;
+   margin-bottom:8px;
+}
+
+.welcome-text p{
+   color:#555;
+}
+
+/* Botones de acceso rápido */
+.actions{
+   display:
+   flex;gap:12px;
+}
+
+.actions button{
+   padding:10px 16px;
+   border:0;
+   border-radius:8px;
+   background-color:#a11a12;
+   color:white;cursor:pointer;
+}
+
+.actions button:hover{
+   background-color:#87100a;
+   box-shadow:0 6px 18px rgba(214,31,15,.947);
+}
+
+/* Paneles: pedidos recientes (ancho) y stock bajo (angosto) */
+.paneles{
+   display:grid;
+   grid-template-columns:2fr 1fr;
+   gap:12px;
+}
+
+/* Filas dentro de los paneles */
+.pedido,.producto-stock{
+   display:flex;
+   justify-content:space-between;
+   align-items:center;
+   gap:12px;
+   padding:12px 0;
+   border-bottom:1px solid #eee9dc;
+}
+
+.pedido h3{
+   font-size:.85rem;
+   margin-bottom:4px;
+}
+.pedido p{
+   color:#8b756e;
+   font-size:.75rem;
+}
+
+.pedido strong,.producto-stock strong{
+   color:#a11a12;
+   font-size:.8rem;
+   white-space:nowrap;
+}
+
+.pedido .estado{
+   flex-shrink:0;
+}
+
+.panel .mensaje-vacio{
+   color:#8b756e;
+   font-size:.85rem;
+   margin-top:12px;
+}
+
+.panel-encabezado{
+   display:flex;
+   justify-content:space-between;
+   align-items:center;
+   gap:12px;
+}
+
+.boton-ver-pedidos{
+   padding:8px 12px;
+   border-radius:8px;
+   background-color:#a11a12;
+   color:white;
+   font-size:.85rem;
+   text-decoration:none;
+   white-space:nowrap;
+   transition:background-color .2s ease,box-shadow .2s ease;
+}
+
+.boton-ver-pedidos:hover{
+   background-color:#87100a;
+   box-shadow:0 6px 18px rgba(214,31,15,.947);
+}
+
+
+@media (max-width: 700px) {
+  .resumen {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .paneles {
+    grid-template-columns: 1fr;
+  }
+}
